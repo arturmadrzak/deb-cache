@@ -6,7 +6,7 @@ ENV SQUID_VERSION=5.0.6-r0
 
 RUN apk add --no-cache squid=${SQUID_VERSION}
 
-COPY squid.conf /etc/squid/squid.conf
+COPY squid.conf.template /etc/squid/squid.conf.template
 COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod 755 /sbin/entrypoint.sh
 
